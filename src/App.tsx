@@ -113,7 +113,7 @@ function App() {
                 Community-Created Resource
               </h3>
               <p className="mt-2 text-amber-700">
-                This is an <strong>unofficial</strong> community guide to Factory AI. This resource is not affiliated with, endorsed by, or connected to Factory AI in any way. For official documentation, please visit <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline">docs.factory.ai</a>.
+                This is an <strong>unofficial</strong> community guide to Factory AI. This resource is not affiliated with, endorsed by, or connected to Factory AI in any way. For official information, please visit <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline">app.factory.ai</a>.
               </p>
             </div>
             
@@ -172,7 +172,7 @@ function App() {
               <div className="rounded-lg bg-blue-50 p-4 border border-blue-200 mt-4">
                 <p className="text-sm text-blue-700 flex items-start">
                   <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>This guide reflects our community's experience with Factory AI. Features and interfaces may change. Always refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official documentation</a> for the most up-to-date information.</span>
+                  <span>This guide reflects our community's experience with Factory AI. Features and interfaces may change. Always refer to the <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official Factory AI app</a> for the most up-to-date information.</span>
                 </p>
               </div>
             </div>
@@ -508,7 +508,7 @@ function App() {
               <div className="rounded-lg bg-blue-50 p-4 border border-blue-200 mt-4">
                 <p className="text-sm text-blue-700 flex items-start">
                   <ExternalLink className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>For official GitHub integration documentation, please refer to the <a href="https://docs.factory.ai/integrations/github" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI documentation</a>.</span>
+                  <span>For official GitHub integration information, visit <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI</a> and check the settings page. The specific path to GitHub integration documentation may vary.</span>
                 </p>
               </div>
             </div>
@@ -603,7 +603,7 @@ function App() {
               <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
                 <p className="text-sm text-amber-800 flex items-start">
                   <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>These workflows are based on community experience and may not reflect the most current features. For the latest capabilities, please refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official Factory AI documentation</a>.</span>
+                  <span>These workflows are based on community experience and may not reflect the most current features. For the latest capabilities, please visit <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI</a> directly.</span>
                 </p>
               </div>
             </div>
@@ -716,7 +716,7 @@ function App() {
               <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
                 <p className="text-sm text-amber-800 flex items-start">
                   <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>These examples are based on community projects and may not represent official Factory AI use cases. For verified examples, check the <a href="https://docs.factory.ai/examples" target="_blank" rel="noopener noreferrer" className="underline font-medium">official examples</a> in the Factory AI documentation.</span>
+                  <span>These examples are based on community projects and may not represent official Factory AI use cases. For verified examples, visit <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI</a> to see what's possible.</span>
                 </p>
               </div>
             </div>
@@ -746,46 +746,46 @@ function App() {
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <HelpCircle className="h-5 w-5 mr-2 text-factory-orange" />
-                Help & Official Resources
+                Help & Resources
               </h3>
               <p className="mt-2">
-                Here are links to official Factory AI resources and documentation that our community has found helpful.
+                Here are links to Factory AI resources and places to find help when you get stuck.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">Official Resources:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Available Resources:</h3>
               
               <div className="grid gap-3">
-                <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <BookOpen className="h-4 w-4 mr-2 text-factory-orange" />
-                    Official Documentation
+                    Factory AI Website
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Comprehensive guides, tutorials, and reference materials from Factory AI
+                    Visit the official Factory AI application for the most up-to-date information
                   </p>
                 </a>
 
-                <a href="https://community.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <MessageSquare className="h-4 w-4 mr-2 text-factory-orange" />
-                    Official Community Forum
+                    Ask in the Community
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Connect with other users, ask questions, and share your projects
+                    Connect with other users on Reddit, Discord, or other forums where Factory AI users gather
                   </p>
-                </a>
+                </div>
 
-                <a href="https://www.youtube.com/factoryai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <Zap className="h-4 w-4 mr-2 text-factory-orange" />
-                    Official Video Tutorials
+                    Search for Tutorials
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Step-by-step video guides for visual learners from Factory AI
+                    Look for Factory AI tutorials on YouTube and other learning platforms
                   </p>
-                </a>
+                </div>
 
                 <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
                   <h4 className="font-medium flex items-center text-factory-purple">
@@ -811,7 +811,7 @@ function App() {
               <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
                 <p className="text-sm text-amber-800 flex items-start">
                   <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>This guide is community-created and not an official Factory AI resource. Always refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official Factory AI documentation</a> for the most accurate and up-to-date information.</span>
+                  <span>This guide is community-created and not an official Factory AI resource. Always refer to <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI</a> for the most accurate and up-to-date information.</span>
                 </p>
               </div>
             </div>
@@ -872,8 +872,8 @@ function App() {
           <p className="text-amber-800 text-sm flex items-center justify-center">
             <Info className="h-4 w-4 mr-2" />
             This is a community-created guide and is NOT affiliated with or endorsed by Factory AI.
-            <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline ml-1 font-medium">
-              Visit official documentation
+            <a href="https://app.factory.ai" target="_blank" rel="noopener noreferrer" className="underline ml-1 font-medium">
+              Visit Factory AI
             </a>
           </p>
         </div>
@@ -939,7 +939,7 @@ function App() {
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Disclaimer: This guide is not affiliated with, endorsed by, or officially connected to Factory AI. 
-                  For official documentation and support, please visit <a href="https://docs.factory.ai" className="underline hover:text-factory-purple" target="_blank" rel="noopener noreferrer">docs.factory.ai</a>
+                  For official documentation and support, please visit <a href="https://app.factory.ai" className="underline hover:text-factory-purple" target="_blank" rel="noopener noreferrer">app.factory.ai</a>
                 </p>
               </CardFooter>
             </Card>
