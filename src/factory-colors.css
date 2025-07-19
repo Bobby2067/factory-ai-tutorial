@@ -1,0 +1,110 @@
+:root {
+  /* Factory AI Brand Colors */
+  --factory-purple: #6E2FFF;
+  --factory-orange: #FF7A00;
+  
+  /* Purple with various opacity levels */
+  --factory-purple-5: rgba(110, 47, 255, 0.05);
+  --factory-purple-10: rgba(110, 47, 255, 0.1);
+  --factory-purple-20: rgba(110, 47, 255, 0.2);
+  --factory-purple-30: rgba(110, 47, 255, 0.3);
+  --factory-purple-40: rgba(110, 47, 255, 0.4);
+  --factory-purple-50: rgba(110, 47, 255, 0.5);
+  --factory-purple-60: rgba(110, 47, 255, 0.6);
+  --factory-purple-70: rgba(110, 47, 255, 0.7);
+  --factory-purple-80: rgba(110, 47, 255, 0.8);
+  --factory-purple-90: rgba(110, 47, 255, 0.9);
+  
+  /* Orange with various opacity levels */
+  --factory-orange-5: rgba(255, 122, 0, 0.05);
+  --factory-orange-10: rgba(255, 122, 0, 0.1);
+  --factory-orange-20: rgba(255, 122, 0, 0.2);
+  --factory-orange-30: rgba(255, 122, 0, 0.3);
+  --factory-orange-40: rgba(255, 122, 0, 0.4);
+  --factory-orange-50: rgba(255, 122, 0, 0.5);
+  --factory-orange-60: rgba(255, 122, 0, 0.6);
+  --factory-orange-70: rgba(255, 122, 0, 0.7);
+  --factory-orange-80: rgba(255, 122, 0, 0.8);
+  --factory-orange-90: rgba(255, 122, 0, 0.9);
+}
+
+/* Tailwind CSS Custom Colors */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-factory-purple: 110, 47, 255;
+    --color-factory-orange: 255, 122, 0;
+  }
+}
+
+/* Add Tailwind utility classes */
+.text-factory-purple {
+  color: var(--factory-purple);
+}
+
+.text-factory-orange {
+  color: var(--factory-orange);
+}
+
+.bg-factory-purple {
+  background-color: var(--factory-purple);
+}
+
+.bg-factory-orange {
+  background-color: var(--factory-orange);
+}
+
+.border-factory-purple {
+  border-color: var(--factory-purple);
+}
+
+.border-factory-orange {
+  border-color: var(--factory-orange);
+}
+
+/* Opacity variants are handled by Tailwind's opacity modifiers */
+.bg-factory-purple\/5 {
+  background-color: var(--factory-purple-5);
+}
+
+.bg-factory-purple\/10 {
+  background-color: var(--factory-purple-10);
+}
+
+.bg-factory-purple\/20 {
+  background-color: var(--factory-purple-20);
+}
+
+.border-factory-purple\/10 {
+  border-color: var(--factory-purple-10);
+}
+
+.border-factory-purple\/20 {
+  border-color: var(--factory-purple-20);
+}
+
+.border-factory-purple\/30 {
+  border-color: var(--factory-purple-30);
+}
+
+/* Gradient utilities */
+.from-factory-purple {
+  --tw-gradient-from: var(--factory-purple);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(110, 47, 255, 0));
+}
+
+.to-factory-orange {
+  --tw-gradient-to: var(--factory-orange);
+}
+
+.from-factory-purple\/20 {
+  --tw-gradient-from: var(--factory-purple-20);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(110, 47, 255, 0));
+}
+
+.to-factory-orange\/20 {
+  --tw-gradient-to: var(--factory-orange-20);
+}

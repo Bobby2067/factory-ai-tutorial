@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './components/ui/card';
 import { Button } from './components/ui/button';
+import './factory-colors.css'; // Import custom Factory AI colors
 
 // Define tutorial section types
 type TutorialSection = {
@@ -31,8 +32,6 @@ type TutorialSection = {
   icon: React.ReactNode;
   description: string;
 };
-
-// Define tutorial step types
 
 function App() {
   // State for active section
@@ -104,9 +103,9 @@ function App() {
       case 'intro':
         return (
           <div className="space-y-6">
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <Sparkles className="h-5 w-5 mr-2 text-primary" />
+                <Sparkles className="h-5 w-5 mr-2 text-factory-orange" />
                 Welcome to Factory AI
               </h3>
               <p className="mt-2">
@@ -115,37 +114,37 @@ function App() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">What You Can Do With Factory AI:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">What You Can Do With Factory AI:</h3>
               
               <div className="grid gap-3">
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <Bot className="h-5 w-5 text-primary mt-0.5" />
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <Bot className="h-5 w-5 text-factory-orange mt-0.5" />
                   <div>
-                    <h4 className="font-medium">Chat with AI Assistants</h4>
+                    <h4 className="font-medium text-factory-purple">Chat with AI Assistants</h4>
                     <p className="text-sm text-muted-foreground">Get help with coding, design, and creative tasks through natural conversation</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <Code className="h-5 w-5 text-primary mt-0.5" />
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <Code className="h-5 w-5 text-factory-orange mt-0.5" />
                   <div>
-                    <h4 className="font-medium">Create and Edit Code</h4>
+                    <h4 className="font-medium text-factory-purple">Create and Edit Code</h4>
                     <p className="text-sm text-muted-foreground">Build applications, websites, and scripts even if you're not an expert coder</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <Terminal className="h-5 w-5 text-primary mt-0.5" />
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <Terminal className="h-5 w-5 text-factory-orange mt-0.5" />
                   <div>
-                    <h4 className="font-medium">Run Commands on Your Machine</h4>
+                    <h4 className="font-medium text-factory-purple">Run Commands on Your Machine</h4>
                     <p className="text-sm text-muted-foreground">Execute terminal commands and see results without leaving the interface</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <Github className="h-5 w-5 text-primary mt-0.5" />
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <Github className="h-5 w-5 text-factory-orange mt-0.5" />
                   <div>
-                    <h4 className="font-medium">Integrate with GitHub</h4>
+                    <h4 className="font-medium text-factory-purple">Integrate with GitHub</h4>
                     <p className="text-sm text-muted-foreground">Work with your repositories, create pull requests, and manage code</p>
                   </div>
                 </div>
@@ -156,12 +155,13 @@ function App() {
               <Button 
                 variant="outline"
                 disabled={true}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('bridge')}
-                className="gap-1"
+                className="gap-1 bg-gradient-to-r from-factory-purple to-factory-orange text-white hover:opacity-90"
               >
                 Next: Connecting Bridge
                 <ChevronRight className="h-4 w-4" />
@@ -173,9 +173,9 @@ function App() {
       case 'bridge':
         return (
           <div className="space-y-6">
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <Cpu className="h-5 w-5 mr-2 text-primary" />
+                <Cpu className="h-5 w-5 mr-2 text-factory-orange" />
                 Connecting Bridge
               </h3>
               <p className="mt-2">
@@ -184,15 +184,15 @@ function App() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Step-by-Step Guide:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Step-by-Step Guide:</h3>
               
               <div className="space-y-3">
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border">
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">
                     1
                   </div>
                   <div className="space-y-1">
-                    <div className="font-medium">Download Bridge</div>
+                    <div className="font-medium text-factory-purple">Download Bridge</div>
                     <p className="text-sm text-muted-foreground">
                       Click on the CPU icon in the top right corner of the Factory AI interface
                     </p>
@@ -200,13 +200,13 @@ function App() {
                       <Button
                         variant="secondary"
                         size="sm"
-                        className="gap-1"
+                        className="gap-1 bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20"
                         onClick={() => toggleStepCompletion('download-bridge')}
                       >
                         {completedSteps['download-bridge'] ? (
-                          <CheckCircle2 className="h-4 w-4 text-green-500" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-orange" />
                         ) : (
-                          <CheckCircle2 className="h-4 w-4" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-purple/50" />
                         )}
                         Mark as {completedSteps['download-bridge'] ? 'incomplete' : 'complete'}
                       </Button>
@@ -214,12 +214,12 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border">
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">
                     2
                   </div>
                   <div className="space-y-1">
-                    <div className="font-medium">Install Bridge</div>
+                    <div className="font-medium text-factory-purple">Install Bridge</div>
                     <p className="text-sm text-muted-foreground">
                       Run the downloaded installer and follow the prompts to complete installation
                     </p>
@@ -227,13 +227,13 @@ function App() {
                       <Button
                         variant="secondary"
                         size="sm"
-                        className="gap-1"
+                        className="gap-1 bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20"
                         onClick={() => toggleStepCompletion('install-bridge')}
                       >
                         {completedSteps['install-bridge'] ? (
-                          <CheckCircle2 className="h-4 w-4 text-green-500" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-orange" />
                         ) : (
-                          <CheckCircle2 className="h-4 w-4" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-purple/50" />
                         )}
                         Mark as {completedSteps['install-bridge'] ? 'incomplete' : 'complete'}
                       </Button>
@@ -241,12 +241,12 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-md border p-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border">
+                <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">
                     3
                   </div>
                   <div className="space-y-1">
-                    <div className="font-medium">Connect to Factory AI</div>
+                    <div className="font-medium text-factory-purple">Connect to Factory AI</div>
                     <p className="text-sm text-muted-foreground">
                       Once installed, Bridge should automatically connect to Factory AI. The CPU icon will turn green when connected.
                     </p>
@@ -254,13 +254,13 @@ function App() {
                       <Button
                         variant="secondary"
                         size="sm"
-                        className="gap-1"
+                        className="gap-1 bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20"
                         onClick={() => toggleStepCompletion('connect-bridge')}
                       >
                         {completedSteps['connect-bridge'] ? (
-                          <CheckCircle2 className="h-4 w-4 text-green-500" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-orange" />
                         ) : (
-                          <CheckCircle2 className="h-4 w-4" />
+                          <CheckCircle2 className="h-4 w-4 text-factory-purple/50" />
                         )}
                         Mark as {completedSteps['connect-bridge'] ? 'incomplete' : 'complete'}
                       </Button>
@@ -273,22 +273,22 @@ function App() {
                 variant="outline"
                 size="sm"
                 onClick={() => toggleTroubleshooting('bridge')}
-                className="mt-4 w-full"
+                className="mt-4 w-full border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
               >
                 {showTroubleshooting['bridge'] ? 'Hide' : 'Show'} Troubleshooting Tips
               </Button>
 
               {showTroubleshooting['bridge'] && (
-                <div className="rounded-md bg-muted p-4 space-y-3">
-                  <h4 className="font-medium flex items-center">
-                    <AlertCircle className="h-4 w-4 mr-2 text-amber-500" />
+                <div className="rounded-md bg-factory-purple/5 p-4 space-y-3 border border-factory-purple/20 shadow-inner">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <AlertCircle className="h-4 w-4 mr-2 text-factory-orange" />
                     Common Issues
                   </h4>
                   
                   <div className="space-y-2">
-                    <p className="text-sm"><strong>Bridge won't install:</strong> Make sure you have admin privileges on your computer.</p>
-                    <p className="text-sm"><strong>Bridge won't connect:</strong> Try restarting both Bridge and your browser.</p>
-                    <p className="text-sm"><strong>Connection drops:</strong> Check your internet connection and firewall settings.</p>
+                    <p className="text-sm"><strong className="text-factory-purple">Bridge won't install:</strong> Make sure you have admin privileges on your computer.</p>
+                    <p className="text-sm"><strong className="text-factory-purple">Bridge won't connect:</strong> Try restarting both Bridge and your browser.</p>
+                    <p className="text-sm"><strong className="text-factory-purple">Connection drops:</strong> Check your internet connection and firewall settings.</p>
                   </div>
                 </div>
               )}
@@ -298,12 +298,13 @@ function App() {
               <Button 
                 variant="outline"
                 onClick={() => setActiveSection('intro')}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('github')}
-                className="gap-1"
+                className="gap-1 bg-gradient-to-r from-factory-purple to-factory-orange text-white hover:opacity-90"
               >
                 Next: GitHub Setup
                 <ChevronRight className="h-4 w-4" />
@@ -316,9 +317,9 @@ function App() {
         return (
           <div className="space-y-6">
             {/* ----------  HEADER  ---------- */}
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <Github className="h-5 w-5 mr-2 text-primary" />
+                <Github className="h-5 w-5 mr-2 text-factory-orange" />
                 GitHub Integration ― Zero-Assumptions Guide
               </h3>
               <p className="mt-2">
@@ -328,49 +329,50 @@ function App() {
 
             {/* ----------  STEPS  ---------- */}
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Detailed Steps:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Detailed Steps:</h3>
 
               {/* Step 1 */}
-              <div className="rounded-md border p-4 space-y-2">
+              <div className="rounded-md border border-factory-purple/20 p-4 space-y-2 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border">1</span>
-                  Open Settings
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">1</span>
+                  <span className="text-factory-purple">Open Settings</span>
                   {completedSteps['connect-github'] && (
-                    <CheckCircle2 className="h-4 w-4 text-green-500 ml-1" />
+                    <CheckCircle2 className="h-4 w-4 text-factory-orange ml-1" />
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  In the Factory AI web app, locate your <strong>profile avatar</strong> in the <strong>top-right corner</strong>. It looks like a small circle with your initials or picture.
+                  In the Factory AI web app, locate your <strong className="text-factory-purple">profile avatar</strong> in the <strong className="text-factory-purple">top-right corner</strong>. It looks like a small circle with your initials or picture.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
                   Screenshot: "Top-right corner showing avatar → click avatar → dropdown opens".
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Click <strong>Settings</strong> in the dropdown. You should now see a left sidebar that includes "Integrations".
+                  Click <strong className="text-factory-purple">Settings</strong> in the dropdown. You should now see a left sidebar that includes "Integrations".
                 </p>
                 <div className="text-xs text-muted-foreground">
-                  If you don't see "Settings", you may be in full-screen editor mode. Press <kbd>Esc</kbd> once and try again.
+                  If you don't see "Settings", you may be in full-screen editor mode. Press <kbd className="px-1 py-0.5 bg-factory-purple/10 border border-factory-purple/20 rounded text-factory-purple">Esc</kbd> once and try again.
                 </div>
                 <Button
                   variant="secondary"
                   size="sm"
                   onClick={() => toggleStepCompletion('connect-github')}
+                  className="bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20 text-factory-purple"
                 >
                   {completedSteps['connect-github'] ? 'Mark Incomplete' : 'Mark Complete'}
                 </Button>
               </div>
 
               {/* Step 2 */}
-              <div className="rounded-md border p-4 space-y-2">
+              <div className="rounded-md border border-factory-purple/20 p-4 space-y-2 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border">2</span>
-                  Select "Integrations"
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">2</span>
+                  <span className="text-factory-purple">Select "Integrations"</span>
                   {completedSteps['open-integrations'] && (
-                    <CheckCircle2 className="h-4 w-4 text-green-500 ml-1" />
+                    <CheckCircle2 className="h-4 w-4 text-factory-orange ml-1" />
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  In the Settings sidebar, click <strong>Integrations</strong>. The main panel should list available services like GitHub, GitLab, etc.
+                  In the Settings sidebar, click <strong className="text-factory-purple">Integrations</strong>. The main panel should list available services like GitHub, GitLab, etc.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
                   Screenshot: "Integrations page with GitHub card and big <em>Connect</em> button".
@@ -379,28 +381,29 @@ function App() {
                   variant="secondary"
                   size="sm"
                   onClick={() => toggleStepCompletion('open-integrations')}
+                  className="bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20 text-factory-purple"
                 >
                   {completedSteps['open-integrations'] ? 'Mark Incomplete' : 'Mark Complete'}
                 </Button>
               </div>
 
               {/* Step 3 */}
-              <div className="rounded-md border p-4 space-y-2">
+              <div className="rounded-md border border-factory-purple/20 p-4 space-y-2 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border">3</span>
-                  Click "Connect" on the GitHub Card
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">3</span>
+                  <span className="text-factory-purple">Click "Connect" on the GitHub Card</span>
                   {completedSteps['click-connect'] && (
-                    <CheckCircle2 className="h-4 w-4 text-green-500 ml-1" />
+                    <CheckCircle2 className="h-4 w-4 text-factory-orange ml-1" />
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  A new browser tab opens: <code>github.com/login/oauth/...</code>. You'll see the "Authorize Factory-AI" page.
+                  A new browser tab opens: <code className="px-1 py-0.5 bg-factory-purple/10 border border-factory-purple/20 rounded text-factory-purple">github.com/login/oauth/...</code>. You'll see the "Authorize Factory-AI" page.
                 </p>
                 <p className="text-sm text-muted-foreground italic">
                   Screenshot: "GitHub OAuth screen with green <em>Authorize</em> button".
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Click the <strong>Authorize Factory-AI</strong> button.
+                  Click the <strong className="text-factory-purple">Authorize Factory-AI</strong> button.
                 </p>
                 <div className="text-xs text-muted-foreground">
                   If you manage multiple organizations, GitHub will ask "Where do you want to install?". Pick <em>Only select repositories</em> if you want to limit access.
@@ -409,31 +412,33 @@ function App() {
                   variant="secondary"
                   size="sm"
                   onClick={() => toggleStepCompletion('click-connect')}
+                  className="bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20 text-factory-purple"
                 >
                   {completedSteps['click-connect'] ? 'Mark Incomplete' : 'Mark Complete'}
                 </Button>
               </div>
 
               {/* Step 4 */}
-              <div className="rounded-md border p-4 space-y-2">
+              <div className="rounded-md border border-factory-purple/20 p-4 space-y-2 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-2 font-medium">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border">4</span>
-                  Confirm Success
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-factory-purple bg-factory-purple/10 text-factory-purple font-medium">4</span>
+                  <span className="text-factory-purple">Confirm Success</span>
                   {completedSteps['confirm-success'] && (
-                    <CheckCircle2 className="h-4 w-4 text-green-500 ml-1" />
+                    <CheckCircle2 className="h-4 w-4 text-factory-orange ml-1" />
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground">
                   You'll be redirected back to Factory AI. The GitHub card now shows a green check mark and lists the repositories you granted.
                 </p>
                 <ul className="text-sm list-disc list-inside text-muted-foreground">
-                  <li><strong>Before</strong>: Gray <em>Connect</em> button</li>
-                  <li><strong>After</strong>: Green "Connected" badge + repo list</li>
+                  <li><strong className="text-factory-purple">Before</strong>: Gray <em>Connect</em> button</li>
+                  <li><strong className="text-factory-purple">After</strong>: Green "Connected" badge + repo list</li>
                 </ul>
                 <Button
                   variant="secondary"
                   size="sm"
                   onClick={() => toggleStepCompletion('confirm-success')}
+                  className="bg-factory-purple/10 hover:bg-factory-purple/20 border-factory-purple/20 text-factory-purple"
                 >
                   {completedSteps['confirm-success'] ? 'Mark Incomplete' : 'Mark Complete'}
                 </Button>
@@ -444,24 +449,24 @@ function App() {
                 variant="outline"
                 size="sm"
                 onClick={() => toggleTroubleshooting('github')}
-                className="w-full"
+                className="w-full border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
               >
                 {showTroubleshooting['github'] ? 'Hide' : 'Show'} Troubleshooting & Error Messages
               </Button>
 
               {showTroubleshooting['github'] && (
-                <div className="rounded-md bg-muted p-4 space-y-3">
-                  <h4 className="font-medium flex items-center">
-                    <AlertCircle className="h-4 w-4 mr-2 text-amber-500" />
+                <div className="rounded-md bg-factory-purple/5 p-4 space-y-3 border border-factory-purple/20 shadow-inner">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <AlertCircle className="h-4 w-4 mr-2 text-factory-orange" />
                     Common Issues & Fixes
                   </h4>
                   <div className="space-y-2 text-sm">
-                    <p><strong>Error:</strong> "<em>Oops! Something went wrong</em>" on GitHub page.<br/>
-                      <strong>Fix:</strong> Ensure you are logged into the correct GitHub account and try again.
+                    <p><strong className="text-factory-purple">Error:</strong> "<em>Oops! Something went wrong</em>" on GitHub page.<br/>
+                      <strong className="text-factory-purple">Fix:</strong> Ensure you are logged into the correct GitHub account and try again.
                     </p>
-                    <p><strong>Error:</strong> "<em>Forbidden</em>" after authorizing.<br/>
-                      <strong>Fix:</strong> Your organization may require admin approval. Ask an org owner to approve the OAuth app.</p>
-                    <p><strong>Looks Different?</strong> GitHub occasionally updates its UI. Look for a green button that says <em>Authorize</em> or <em>Install &amp; Authorize</em>.</p>
+                    <p><strong className="text-factory-purple">Error:</strong> "<em>Forbidden</em>" after authorizing.<br/>
+                      <strong className="text-factory-purple">Fix:</strong> Your organization may require admin approval. Ask an org owner to approve the OAuth app.</p>
+                    <p><strong className="text-factory-purple">Looks Different?</strong> GitHub occasionally updates its UI. Look for a green button that says <em>Authorize</em> or <em>Install &amp; Authorize</em>.</p>
                   </div>
                 </div>
               )}
@@ -471,12 +476,13 @@ function App() {
               <Button 
                 variant="outline"
                 onClick={() => setActiveSection('bridge')}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('workflows')}
-                className="gap-1"
+                className="gap-1 bg-gradient-to-r from-factory-purple to-factory-orange text-white hover:opacity-90"
               >
                 Next: Basic Workflows
                 <ChevronRight className="h-4 w-4" />
@@ -488,9 +494,9 @@ function App() {
       case 'workflows':
         return (
           <div className="space-y-6">
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <Workflow className="h-5 w-5 mr-2 text-primary" />
+                <Workflow className="h-5 w-5 mr-2 text-factory-orange" />
                 Basic Workflows
               </h3>
               <p className="mt-2">
@@ -499,12 +505,12 @@ function App() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Common Workflows:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Common Workflows:</h3>
               
               <div className="space-y-3">
-                <div className="rounded-md border p-3">
-                  <h4 className="font-medium flex items-center">
-                    <MessageSquare className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <MessageSquare className="h-4 w-4 mr-2 text-factory-orange" />
                     Chatting with Factory AI
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -512,9 +518,9 @@ function App() {
                   </p>
                 </div>
 
-                <div className="rounded-md border p-3">
-                  <h4 className="font-medium flex items-center">
-                    <FileCode className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <FileCode className="h-4 w-4 mr-2 text-factory-orange" />
                     Creating and Editing Files
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -522,9 +528,9 @@ function App() {
                   </p>
                 </div>
 
-                <div className="rounded-md border p-3">
-                  <h4 className="font-medium flex items-center">
-                    <Terminal className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Terminal className="h-4 w-4 mr-2 text-factory-orange" />
                     Running Commands
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -532,9 +538,9 @@ function App() {
                   </p>
                 </div>
 
-                <div className="rounded-md border p-3">
-                  <h4 className="font-medium flex items-center">
-                    <Github className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Github className="h-4 w-4 mr-2 text-factory-orange" />
                     Working with GitHub
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -543,9 +549,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="rounded-lg bg-muted p-4 mt-4">
-                <h4 className="font-medium flex items-center">
-                  <Lightbulb className="h-4 w-4 mr-2 text-amber-500" />
+              <div className="rounded-lg bg-factory-purple/5 p-4 mt-4 border border-factory-purple/20 shadow-inner">
+                <h4 className="font-medium flex items-center text-factory-purple">
+                  <Lightbulb className="h-4 w-4 mr-2 text-factory-orange" />
                   Pro Tip
                 </h4>
                 <p className="text-sm mt-1">
@@ -558,12 +564,13 @@ function App() {
               <Button 
                 variant="outline"
                 onClick={() => setActiveSection('github')}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('usecases')}
-                className="gap-1"
+                className="gap-1 bg-gradient-to-r from-factory-purple to-factory-orange text-white hover:opacity-90"
               >
                 Next: Use Cases
                 <ChevronRight className="h-4 w-4" />
@@ -575,9 +582,9 @@ function App() {
       case 'usecases':
         return (
           <div className="space-y-6">
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <Lightbulb className="h-5 w-5 mr-2 text-primary" />
+                <Lightbulb className="h-5 w-5 mr-2 text-factory-orange" />
                 Use Cases for Beginners
               </h3>
               <p className="mt-2">
@@ -586,57 +593,73 @@ function App() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">What You Can Build:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">What You Can Build:</h3>
               
               <div className="grid gap-3">
-                <div className="rounded-md border p-4">
-                  <h4 className="font-medium flex items-center">
-                    <LayoutDashboard className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <LayoutDashboard className="h-4 w-4 mr-2 text-factory-orange" />
                     Personal Website or Portfolio
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     Create a professional website to showcase your work, skills, and experience.
                   </p>
-                  <Button variant="outline" size="sm" className="mt-3">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-3 border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                  >
                     Try This Example
                   </Button>
                 </div>
 
-                <div className="rounded-md border p-4">
-                  <h4 className="font-medium flex items-center">
-                    <Bot className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Bot className="h-4 w-4 mr-2 text-factory-orange" />
                     Simple Chatbot
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     Build a custom chatbot for your website or application without complex coding.
                   </p>
-                  <Button variant="outline" size="sm" className="mt-3">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-3 border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                  >
                     Try This Example
                   </Button>
                 </div>
 
-                <div className="rounded-md border p-4">
-                  <h4 className="font-medium flex items-center">
-                    <Braces className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Braces className="h-4 w-4 mr-2 text-factory-orange" />
                     Data Visualization Tool
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     Create interactive charts and graphs to visualize your data.
                   </p>
-                  <Button variant="outline" size="sm" className="mt-3">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-3 border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                  >
                     Try This Example
                   </Button>
                 </div>
 
-                <div className="rounded-md border p-4">
-                  <h4 className="font-medium flex items-center">
-                    <Rocket className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Rocket className="h-4 w-4 mr-2 text-factory-orange" />
                     Mobile App Prototype
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     Design and build a functional prototype of your mobile app idea.
                   </p>
-                  <Button variant="outline" size="sm" className="mt-3">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-3 border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                  >
                     Try This Example
                   </Button>
                 </div>
@@ -647,12 +670,13 @@ function App() {
               <Button 
                 variant="outline"
                 onClick={() => setActiveSection('workflows')}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('help')}
-                className="gap-1"
+                className="gap-1 bg-gradient-to-r from-factory-purple to-factory-orange text-white hover:opacity-90"
               >
                 Next: Help & Resources
                 <ChevronRight className="h-4 w-4" />
@@ -664,9 +688,9 @@ function App() {
       case 'help':
         return (
           <div className="space-y-6">
-            <div className="rounded-lg bg-primary/10 p-4 border border-primary/20">
+            <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
-                <HelpCircle className="h-5 w-5 mr-2 text-primary" />
+                <HelpCircle className="h-5 w-5 mr-2 text-factory-orange" />
                 Help & Resources
               </h3>
               <p className="mt-2">
@@ -675,12 +699,12 @@ function App() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium">Resources:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Resources:</h3>
               
               <div className="grid gap-3">
-                <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border p-4 hover:bg-muted/50 transition-colors">
-                  <h4 className="font-medium flex items-center">
-                    <BookOpen className="h-4 w-4 mr-2 text-primary" />
+                <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <BookOpen className="h-4 w-4 mr-2 text-factory-orange" />
                     Official Documentation
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -688,9 +712,9 @@ function App() {
                   </p>
                 </a>
 
-                <a href="https://community.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border p-4 hover:bg-muted/50 transition-colors">
-                  <h4 className="font-medium flex items-center">
-                    <MessageSquare className="h-4 w-4 mr-2 text-primary" />
+                <a href="https://community.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <MessageSquare className="h-4 w-4 mr-2 text-factory-orange" />
                     Community Forum
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -698,9 +722,9 @@ function App() {
                   </p>
                 </a>
 
-                <a href="https://www.youtube.com/factoryai" target="_blank" rel="noopener noreferrer" className="rounded-md border p-4 hover:bg-muted/50 transition-colors">
-                  <h4 className="font-medium flex items-center">
-                    <Zap className="h-4 w-4 mr-2 text-primary" />
+                <a href="https://www.youtube.com/factoryai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <Zap className="h-4 w-4 mr-2 text-factory-orange" />
                     Video Tutorials
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -708,9 +732,9 @@ function App() {
                   </p>
                 </a>
 
-                <div className="rounded-md border p-4">
-                  <h4 className="font-medium flex items-center">
-                    <PanelLeft className="h-4 w-4 mr-2 text-primary" />
+                <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <h4 className="font-medium flex items-center text-factory-purple">
+                    <PanelLeft className="h-4 w-4 mr-2 text-factory-orange" />
                     In-App Help
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -719,9 +743,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="rounded-lg bg-muted p-4 mt-4">
-                <h4 className="font-medium flex items-center">
-                  <Lightbulb className="h-4 w-4 mr-2 text-amber-500" />
+              <div className="rounded-lg bg-factory-purple/5 p-4 mt-4 border border-factory-purple/20 shadow-inner">
+                <h4 className="font-medium flex items-center text-factory-purple">
+                  <Lightbulb className="h-4 w-4 mr-2 text-factory-orange" />
                   Need More Help?
                 </h4>
                 <p className="text-sm mt-1">
@@ -734,13 +758,14 @@ function App() {
               <Button 
                 variant="outline"
                 onClick={() => setActiveSection('usecases')}
+                className="border-factory-purple/30 text-factory-purple"
               >
                 Previous
               </Button>
               <Button 
                 onClick={() => setActiveSection('intro')}
                 variant="outline"
-                className="gap-1"
+                className="gap-1 border-factory-purple/30 text-factory-purple"
               >
                 Back to Start
               </Button>
@@ -765,15 +790,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-white to-factory-purple/5">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b bg-gradient-to-r from-factory-purple to-factory-orange shadow-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Sparkles className="h-6 w-6 text-primary" />
-            <h1 className="text-2xl font-bold">Factory AI Tutorial</h1>
+            <Sparkles className="h-6 w-6 text-white" />
+            <h1 className="text-2xl font-bold text-white">Factory AI Tutorial</h1>
           </div>
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-white/90 bg-white/20 px-3 py-1 rounded-full">
             Progress: {calculateProgress()}%
           </div>
         </div>
@@ -783,18 +808,24 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="md:col-span-1 space-y-4">
-            <div className="rounded-lg bg-muted p-4">
-              <h2 className="text-lg font-medium mb-3">Tutorial Sections</h2>
+            <div className="rounded-lg bg-white p-4 shadow-md border border-factory-purple/10">
+              <h2 className="text-lg font-medium mb-3 text-factory-purple">Tutorial Sections</h2>
               <nav className="space-y-1">
                 {tutorialSections.map((section) => (
                   <Button
                     key={section.id}
                     variant={activeSection === section.id ? "secondary" : "ghost"}
-                    className={`w-full justify-start ${activeSection === section.id ? 'bg-secondary' : ''}`}
+                    className={`w-full justify-start ${
+                      activeSection === section.id 
+                        ? 'bg-gradient-to-r from-factory-purple/20 to-factory-orange/20 text-factory-purple border border-factory-purple/20' 
+                        : 'hover:bg-factory-purple/10 text-gray-700'
+                    }`}
                     onClick={() => setActiveSection(section.id)}
                   >
                     <span className="flex items-center">
-                      {section.icon}
+                      <span className={activeSection === section.id ? 'text-factory-orange' : 'text-factory-purple/70'}>
+                        {section.icon}
+                      </span>
                       <span className="ml-2">{section.title}</span>
                     </span>
                   </Button>
@@ -805,24 +836,28 @@ function App() {
 
           {/* Main Content */}
           <div className="md:col-span-3">
-            <Card className="w-full">
-              <CardHeader>
-                <CardTitle>{tutorialSections.find(s => s.id === activeSection)?.title}</CardTitle>
+            <Card className="w-full border-factory-purple/10 shadow-lg">
+              <CardHeader className="bg-gradient-to-r from-factory-purple/10 to-factory-orange/10 border-b border-factory-purple/10">
+                <CardTitle className="text-factory-purple">{tutorialSections.find(s => s.id === activeSection)?.title}</CardTitle>
                 <CardDescription>
                   {tutorialSections.find(s => s.id === activeSection)?.description}
                 </CardDescription>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="pt-6">
                 {getTutorialContent()}
               </CardContent>
               
-              <CardFooter className="flex justify-between border-t pt-4">
-                <p className="text-sm text-muted-foreground">
+              <CardFooter className="flex justify-between border-t border-factory-purple/10 pt-4 bg-gradient-to-r from-factory-purple/5 to-factory-orange/5">
+                <p className="text-sm text-factory-purple/70">
                   Factory AI Tutorial - Designed for beginners
                 </p>
-                <Button variant="outline" size="sm">
-                  <HelpCircle className="h-4 w-4 mr-2" />
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                >
+                  <HelpCircle className="h-4 w-4 mr-2 text-factory-orange" />
                   Get Help
                 </Button>
               </CardFooter>
