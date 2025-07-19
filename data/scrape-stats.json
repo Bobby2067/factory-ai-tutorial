@@ -1,0 +1,17 @@
+{
+  "startTime": 1752929897411,
+  "totalPages": 10,
+  "sources": {
+    "factory": {
+      "name": "Factory AI Documentation",
+      "startTime": 1752929897432,
+      "pagesScraped": 10,
+      "status": "completed",
+      "endTime": 1752929910815,
+      "duration": 13383
+    }
+  },
+  "errors": [],
+  "endTime": 1752929910815,
+  "duration": 13404
+}

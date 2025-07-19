@@ -1,0 +1,152 @@
+{
+  "welcome": {
+    "title": "Welcome",
+    "items": [
+      {
+        "title": "Index - Factory Documentation",
+        "url": "https://docs.factory.ai/welcome",
+        "path": "/welcome",
+        "type": "tutorial",
+        "children": [
+          {
+            "title": "Index - Factory Documentation",
+            "url": "https://docs.factory.ai",
+            "path": "/",
+            "type": "tutorial"
+          },
+          {
+            "title": "Welcome to Factory",
+            "url": "https://docs.factory.ai/user-guides/get-started/overview",
+            "path": "/user-guides/get-started/overview",
+            "type": "guide"
+          },
+          {
+            "title": "Factory Release 1.1",
+            "url": "https://docs.factory.ai/changelog/1-1",
+            "path": "/changelog/1-1",
+            "type": "changelog"
+          },
+          {
+            "title": "Welcome to Factory Onboarding - Enterprise",
+            "url": "https://docs.factory.ai/onboarding",
+            "path": "/onboarding",
+            "type": "onboarding"
+          },
+          {
+            "title": "5-Minute Quickstart",
+            "url": "https://docs.factory.ai/user-guides/get-started/quickstart",
+            "path": "/user-guides/get-started/quickstart",
+            "type": "guide"
+          },
+          {
+            "title": "Understanding Context in Factory",
+            "url": "https://docs.factory.ai/user-guides/managing-context/understanding-context",
+            "path": "/user-guides/managing-context/understanding-context",
+            "type": "guide"
+          },
+          {
+            "title": "Understanding Droids",
+            "url": "https://docs.factory.ai/user-guides/droids/understanding-droids",
+            "path": "/user-guides/droids/understanding-droids",
+            "type": "guide"
+          },
+          {
+            "title": "Using the Chat Interface",
+            "url": "https://docs.factory.ai/user-guides/sessions-in-factory/chat-interface",
+            "path": "/user-guides/sessions-in-factory/chat-interface",
+            "type": "guide"
+          },
+          {
+            "title": "Factory Use Cases",
+            "url": "https://docs.factory.ai/user-guides/sessions-in-factory/use-cases",
+            "path": "/user-guides/sessions-in-factory/use-cases",
+            "type": "guide"
+          }
+        ]
+      }
+    ]
+  },
+  "general": {
+    "title": "General",
+    "items": [
+      {
+        "title": "Index - Factory Documentation",
+        "url": "https://docs.factory.ai/",
+        "path": "/",
+        "type": "tutorial",
+        "children": []
+      }
+    ]
+  },
+  "user-guides": {
+    "title": "User-guides",
+    "items": [
+      {
+        "title": "Understanding Droids",
+        "url": "https://docs.factory.ai/user-guides/droids/understanding-droids",
+        "path": "/user-guides/droids/understanding-droids",
+        "type": "guide",
+        "children": []
+      },
+      {
+        "title": "Welcome to Factory",
+        "url": "https://docs.factory.ai/user-guides/get-started/overview",
+        "path": "/user-guides/get-started/overview",
+        "type": "guide",
+        "children": []
+      },
+      {
+        "title": "5-Minute Quickstart",
+        "url": "https://docs.factory.ai/user-guides/get-started/quickstart",
+        "path": "/user-guides/get-started/quickstart",
+        "type": "guide",
+        "children": []
+      },
+      {
+        "title": "Understanding Context in Factory",
+        "url": "https://docs.factory.ai/user-guides/managing-context/understanding-context",
+        "path": "/user-guides/managing-context/understanding-context",
+        "type": "guide",
+        "children": []
+      },
+      {
+        "title": "Using the Chat Interface",
+        "url": "https://docs.factory.ai/user-guides/sessions-in-factory/chat-interface",
+        "path": "/user-guides/sessions-in-factory/chat-interface",
+        "type": "guide",
+        "children": []
+      },
+      {
+        "title": "Factory Use Cases",
+        "url": "https://docs.factory.ai/user-guides/sessions-in-factory/use-cases",
+        "path": "/user-guides/sessions-in-factory/use-cases",
+        "type": "guide",
+        "children": []
+      }
+    ]
+  },
+  "changelog": {
+    "title": "Changelog",
+    "items": [
+      {
+        "title": "Factory Release 1.1",
+        "url": "https://docs.factory.ai/changelog/1-1",
+        "path": "/changelog/1-1",
+        "type": "changelog",
+        "children": []
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Onboarding",
+    "items": [
+      {
+        "title": "Welcome to Factory Onboarding - Enterprise",
+        "url": "https://docs.factory.ai/onboarding",
+        "path": "/onboarding",
+        "type": "onboarding",
+        "children": []
+      }
+    ]
+  }
+}
