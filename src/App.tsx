@@ -19,7 +19,9 @@ import {
   Bot,
   Workflow,
   LayoutDashboard,
-  Sparkles
+  Sparkles,
+  ExternalLink,
+  Info
 } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './components/ui/card';
 import { Button } from './components/ui/button';
@@ -103,13 +105,23 @@ function App() {
       case 'intro':
         return (
           <div className="space-y-6">
+            <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 shadow-md mb-4">
+              <h3 className="text-lg font-medium flex items-center text-amber-800">
+                <Info className="h-5 w-5 mr-2" />
+                Community-Created Resource
+              </h3>
+              <p className="mt-2 text-amber-700">
+                This is an <strong>unofficial</strong> community guide to Factory AI. This resource is not affiliated with, endorsed by, or connected to Factory AI in any way. For official documentation, please visit <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline">docs.factory.ai</a>.
+              </p>
+            </div>
+            
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <Sparkles className="h-5 w-5 mr-2 text-factory-orange" />
-                Welcome to Factory AI
+                Welcome to Our Community Guide
               </h3>
               <p className="mt-2">
-                Factory AI is a platform that helps you build software faster using AI. It's designed for creators and beginners, not just experienced programmers.
+                Factory AI is a platform that helps you build software faster using AI. This community guide aims to help creators and beginners understand how to use the platform effectively.
               </p>
             </div>
 
@@ -149,6 +161,13 @@ function App() {
                   </div>
                 </div>
               </div>
+              
+              <div className="rounded-lg bg-blue-50 p-4 border border-blue-200 mt-4">
+                <p className="text-sm text-blue-700 flex items-start">
+                  <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>This guide reflects our community's experience with Factory AI. Features and interfaces may change. Always refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official documentation</a> for the most up-to-date information.</span>
+                </p>
+              </div>
             </div>
 
             <div className="flex justify-between">
@@ -179,12 +198,12 @@ function App() {
                 Connecting Bridge
               </h3>
               <p className="mt-2">
-                Bridge allows Factory AI to interact with your local machine. This is essential for running commands, accessing files, and executing code.
+                Bridge allows Factory AI to interact with your local machine. Based on our community experience, here's how to set it up.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">Step-by-Step Guide:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Community Guide to Bridge Setup:</h3>
               
               <div className="space-y-3">
                 <div className="flex items-start gap-3 rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
@@ -275,14 +294,14 @@ function App() {
                 onClick={() => toggleTroubleshooting('bridge')}
                 className="mt-4 w-full border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
               >
-                {showTroubleshooting['bridge'] ? 'Hide' : 'Show'} Troubleshooting Tips
+                {showTroubleshooting['bridge'] ? 'Hide' : 'Show'} Community Troubleshooting Tips
               </Button>
 
               {showTroubleshooting['bridge'] && (
                 <div className="rounded-md bg-factory-purple/5 p-4 space-y-3 border border-factory-purple/20 shadow-inner">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <AlertCircle className="h-4 w-4 mr-2 text-factory-orange" />
-                    Common Issues
+                    Common Issues (Community Solutions)
                   </h4>
                   
                   <div className="space-y-2">
@@ -290,6 +309,10 @@ function App() {
                     <p className="text-sm"><strong className="text-factory-purple">Bridge won't connect:</strong> Try restarting both Bridge and your browser.</p>
                     <p className="text-sm"><strong className="text-factory-purple">Connection drops:</strong> Check your internet connection and firewall settings.</p>
                   </div>
+                  
+                  <p className="text-xs text-muted-foreground italic">
+                    These tips are based on community experience and may not cover all scenarios. For official support, please contact Factory AI directly.
+                  </p>
                 </div>
               )}
             </div>
@@ -320,16 +343,16 @@ function App() {
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <Github className="h-5 w-5 mr-2 text-factory-orange" />
-                GitHub Integration ― Zero-Assumptions Guide
+                GitHub Integration — Community Guide
               </h3>
               <p className="mt-2">
-                These steps walk you through the entire process, with visual cues, expected screens, and what to do if something looks different.
+                Based on our community experience, here are detailed steps for connecting GitHub to Factory AI, with visual cues and troubleshooting tips.
               </p>
             </div>
 
             {/* ----------  STEPS  ---------- */}
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">Detailed Steps:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Detailed Steps from Community Experience:</h3>
 
               {/* Step 1 */}
               <div className="rounded-md border border-factory-purple/20 p-4 space-y-2 shadow-sm hover:shadow-md transition-shadow">
@@ -451,14 +474,14 @@ function App() {
                 onClick={() => toggleTroubleshooting('github')}
                 className="w-full border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
               >
-                {showTroubleshooting['github'] ? 'Hide' : 'Show'} Troubleshooting & Error Messages
+                {showTroubleshooting['github'] ? 'Hide' : 'Show'} Community Troubleshooting Tips
               </Button>
 
               {showTroubleshooting['github'] && (
                 <div className="rounded-md bg-factory-purple/5 p-4 space-y-3 border border-factory-purple/20 shadow-inner">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <AlertCircle className="h-4 w-4 mr-2 text-factory-orange" />
-                    Common Issues & Fixes
+                    Common Issues & Community Solutions
                   </h4>
                   <div className="space-y-2 text-sm">
                     <p><strong className="text-factory-purple">Error:</strong> "<em>Oops! Something went wrong</em>" on GitHub page.<br/>
@@ -468,8 +491,19 @@ function App() {
                       <strong className="text-factory-purple">Fix:</strong> Your organization may require admin approval. Ask an org owner to approve the OAuth app.</p>
                     <p><strong className="text-factory-purple">Looks Different?</strong> GitHub occasionally updates its UI. Look for a green button that says <em>Authorize</em> or <em>Install &amp; Authorize</em>.</p>
                   </div>
+                  
+                  <p className="text-xs text-muted-foreground italic">
+                    These tips are based on community experience and may not cover all scenarios. For official support, please contact Factory AI directly.
+                  </p>
                 </div>
               )}
+              
+              <div className="rounded-lg bg-blue-50 p-4 border border-blue-200 mt-4">
+                <p className="text-sm text-blue-700 flex items-start">
+                  <ExternalLink className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>For official GitHub integration documentation, please refer to the <a href="https://docs.factory.ai/integrations/github" target="_blank" rel="noopener noreferrer" className="underline font-medium">Factory AI documentation</a>.</span>
+                </p>
+              </div>
             </div>
 
             <div className="flex justify-between">
@@ -497,15 +531,15 @@ function App() {
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <Workflow className="h-5 w-5 mr-2 text-factory-orange" />
-                Basic Workflows
+                Basic Workflows — Community Tips
               </h3>
               <p className="mt-2">
-                Learn how to use Factory AI for common tasks, from creating files to building entire applications.
+                Our community has gathered these common workflows that can help you get started with Factory AI.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">Common Workflows:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Common Community Workflows:</h3>
               
               <div className="space-y-3">
                 <div className="rounded-md border border-factory-purple/20 p-3 shadow-sm hover:shadow-md transition-shadow">
@@ -552,10 +586,17 @@ function App() {
               <div className="rounded-lg bg-factory-purple/5 p-4 mt-4 border border-factory-purple/20 shadow-inner">
                 <h4 className="font-medium flex items-center text-factory-purple">
                   <Lightbulb className="h-4 w-4 mr-2 text-factory-orange" />
-                  Pro Tip
+                  Community Tip
                 </h4>
                 <p className="text-sm mt-1">
                   Be specific in your requests to get the best results. Instead of "Make a website", try "Create a simple portfolio website with an about page, projects section, and contact form using HTML and CSS".
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
+                <p className="text-sm text-amber-800 flex items-start">
+                  <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>These workflows are based on community experience and may not reflect the most current features. For the latest capabilities, please refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official Factory AI documentation</a>.</span>
                 </p>
               </div>
             </div>
@@ -585,15 +626,15 @@ function App() {
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <Lightbulb className="h-5 w-5 mr-2 text-factory-orange" />
-                Use Cases for Beginners
+                Community Use Cases for Beginners
               </h3>
               <p className="mt-2">
-                Practical examples of what you can build with Factory AI, even if you're not a programmer.
+                Here are some practical examples our community has found useful when working with Factory AI, especially for beginners.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">What You Can Build:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">What Community Members Have Built:</h3>
               
               <div className="grid gap-3">
                 <div className="rounded-md border border-factory-purple/20 p-4 shadow-sm hover:shadow-md transition-shadow">
@@ -664,6 +705,13 @@ function App() {
                   </Button>
                 </div>
               </div>
+              
+              <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
+                <p className="text-sm text-amber-800 flex items-start">
+                  <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>These examples are based on community projects and may not represent official Factory AI use cases. For verified examples, check the <a href="https://docs.factory.ai/examples" target="_blank" rel="noopener noreferrer" className="underline font-medium">official examples</a> in the Factory AI documentation.</span>
+                </p>
+              </div>
             </div>
 
             <div className="flex justify-between">
@@ -691,15 +739,15 @@ function App() {
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <HelpCircle className="h-5 w-5 mr-2 text-factory-orange" />
-                Help & Resources
+                Help & Official Resources
               </h3>
               <p className="mt-2">
-                Find additional help, documentation, and community resources to support your Factory AI journey.
+                Here are links to official Factory AI resources and documentation that our community has found helpful.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-factory-purple">Resources:</h3>
+              <h3 className="text-lg font-medium text-factory-purple">Official Resources:</h3>
               
               <div className="grid gap-3">
                 <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
@@ -708,14 +756,14 @@ function App() {
                     Official Documentation
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Comprehensive guides, tutorials, and reference materials
+                    Comprehensive guides, tutorials, and reference materials from Factory AI
                   </p>
                 </a>
 
                 <a href="https://community.factory.ai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <MessageSquare className="h-4 w-4 mr-2 text-factory-orange" />
-                    Community Forum
+                    Official Community Forum
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     Connect with other users, ask questions, and share your projects
@@ -725,10 +773,10 @@ function App() {
                 <a href="https://www.youtube.com/factoryai" target="_blank" rel="noopener noreferrer" className="rounded-md border border-factory-purple/20 p-4 hover:bg-factory-purple/5 transition-colors shadow-sm hover:shadow-md">
                   <h4 className="font-medium flex items-center text-factory-purple">
                     <Zap className="h-4 w-4 mr-2 text-factory-orange" />
-                    Video Tutorials
+                    Official Video Tutorials
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Step-by-step video guides for visual learners
+                    Step-by-step video guides for visual learners from Factory AI
                   </p>
                 </a>
 
@@ -746,10 +794,17 @@ function App() {
               <div className="rounded-lg bg-factory-purple/5 p-4 mt-4 border border-factory-purple/20 shadow-inner">
                 <h4 className="font-medium flex items-center text-factory-purple">
                   <Lightbulb className="h-4 w-4 mr-2 text-factory-orange" />
-                  Need More Help?
+                  Community Tip
                 </h4>
                 <p className="text-sm mt-1">
                   You can always ask Factory AI directly! Just say "I need help with..." or "How do I..." and Factory AI will guide you through the process.
+                </p>
+              </div>
+              
+              <div className="rounded-lg bg-amber-100 p-4 border border-amber-300 mt-4">
+                <p className="text-sm text-amber-800 flex items-start">
+                  <Info className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>This guide is community-created and not an official Factory AI resource. Always refer to the <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline font-medium">official Factory AI documentation</a> for the most accurate and up-to-date information.</span>
                 </p>
               </div>
             </div>
@@ -796,20 +851,33 @@ function App() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Sparkles className="h-6 w-6 text-white" />
-            <h1 className="text-2xl font-bold text-white">Factory AI Tutorial</h1>
+            <h1 className="text-2xl font-bold text-white">Unofficial Factory AI Guide</h1>
           </div>
           <div className="text-sm text-white/90 bg-white/20 px-3 py-1 rounded-full">
             Progress: {calculateProgress()}%
           </div>
         </div>
       </header>
+      
+      {/* Disclaimer Banner */}
+      <div className="bg-amber-100 border-b border-amber-300">
+        <div className="container mx-auto px-4 py-2">
+          <p className="text-amber-800 text-sm flex items-center justify-center">
+            <Info className="h-4 w-4 mr-2" />
+            This is a community-created guide and is NOT affiliated with or endorsed by Factory AI.
+            <a href="https://docs.factory.ai" target="_blank" rel="noopener noreferrer" className="underline ml-1 font-medium">
+              Visit official documentation
+            </a>
+          </p>
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="md:col-span-1 space-y-4">
             <div className="rounded-lg bg-white p-4 shadow-md border border-factory-purple/10">
-              <h2 className="text-lg font-medium mb-3 text-factory-purple">Tutorial Sections</h2>
+              <h2 className="text-lg font-medium mb-3 text-factory-purple">Guide Sections</h2>
               <nav className="space-y-1">
                 {tutorialSections.map((section) => (
                   <Button
@@ -848,18 +916,24 @@ function App() {
                 {getTutorialContent()}
               </CardContent>
               
-              <CardFooter className="flex justify-between border-t border-factory-purple/10 pt-4 bg-gradient-to-r from-factory-purple/5 to-factory-orange/5">
-                <p className="text-sm text-factory-purple/70">
-                  Factory AI Tutorial - Designed for beginners
+              <CardFooter className="flex flex-col space-y-3 border-t border-factory-purple/10 pt-4 bg-gradient-to-r from-factory-purple/5 to-factory-orange/5">
+                <div className="flex justify-between w-full">
+                  <p className="text-sm text-factory-purple/70">
+                    Community Guide to Factory AI - Created by users, for users
+                  </p>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
+                  >
+                    <HelpCircle className="h-4 w-4 mr-2 text-factory-orange" />
+                    Get Help
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Disclaimer: This guide is not affiliated with, endorsed by, or officially connected to Factory AI. 
+                  For official documentation and support, please visit <a href="https://docs.factory.ai" className="underline hover:text-factory-purple" target="_blank" rel="noopener noreferrer">docs.factory.ai</a>
                 </p>
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="border-factory-purple/30 text-factory-purple hover:bg-factory-purple/10"
-                >
-                  <HelpCircle className="h-4 w-4 mr-2 text-factory-orange" />
-                  Get Help
-                </Button>
               </CardFooter>
             </Card>
           </div>
