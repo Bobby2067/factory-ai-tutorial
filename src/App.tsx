@@ -33,12 +33,6 @@ type TutorialSection = {
 };
 
 // Define tutorial step types
-type TutorialStep = {
-  id: string;
-  title: string;
-  content: React.ReactNode;
-  isCompleted: boolean;
-};
 
 function App() {
   // State for active section
