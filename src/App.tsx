@@ -25,6 +25,8 @@ import {
 } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from './components/ui/card';
 import { Button } from './components/ui/button';
+import CommunityLogo from './components/CommunityLogo';
+import HeroLogo from './components/HeroLogo';
 import './factory-colors.css'; // Import custom Factory AI colors
 
 // Define tutorial section types
@@ -115,6 +117,11 @@ function App() {
               </p>
             </div>
             
+            {/* Hero Logo */}
+            <div className="flex justify-center">
+              <HeroLogo size={260} />
+            </div>
+
             <div className="rounded-lg bg-factory-purple/10 p-4 border border-factory-purple/20 shadow-md">
               <h3 className="text-lg font-medium flex items-center">
                 <Sparkles className="h-5 w-5 mr-2 text-factory-orange" />
@@ -850,7 +857,7 @@ function App() {
       <header className="border-b bg-gradient-to-r from-factory-purple to-factory-orange shadow-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Sparkles className="h-6 w-6 text-white" />
+            <CommunityLogo size={32} />
             <h1 className="text-2xl font-bold text-white">Unofficial Factory AI Guide</h1>
           </div>
           <div className="text-sm text-white/90 bg-white/20 px-3 py-1 rounded-full">
